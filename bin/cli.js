@@ -74,7 +74,6 @@ function init() {
               copyDir(srcPath, destPath);
             } else {
               fs.copyFileSync(srcPath, destPath);
-              console.log(`Copied: ${path.relative(targetDir, destPath)}`);
             }
           });
         };
@@ -83,7 +82,6 @@ function init() {
       } else {
         // For files, copy directly
         fs.copyFileSync(sourcePath, targetPath);
-        console.log(`Copied: ${item}`);
       }
     });
 
