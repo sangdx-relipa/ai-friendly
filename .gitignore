@@ -1,0 +1,9 @@
+node_modules/
+npm-debug.log
+.DS_Store
+*.swp
+.idea/
+.vscode/
+.claude/
+TASK.md
+.ai/

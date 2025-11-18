@@ -1,0 +1,36 @@
+{
+  "name": "ai-friendly-pack",
+  "version": "1.0.1",
+  "description": "CLI tool to initialize AI-friendly project structure",
+  "main": "index.js",
+  "bin": {
+    "ai-friendly-pack": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "ai",
+    "project-template",
+    "ai-friendly",
+    "documentation",
+    "project-structure",
+    "template-generator"
+  ],
+  "author": "unawesome <relipasangdx@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sangdx-relipa/ai-friendly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sangdx-relipa/ai-friendly/issues"
+  },
+  "homepage": "https://github.com/sangdx-relipa/ai-friendly#readme",
+  "files": [
+    "bin/",
+    "template/"
+  ],
+  "preferGlobal": true
+}
