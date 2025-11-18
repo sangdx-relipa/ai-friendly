@@ -1,6 +1,6 @@
 {
   "name": "ai-friendly-pack",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI tool to initialize AI-friendly project structure",
   "main": "index.js",
   "bin": {
