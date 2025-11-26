@@ -6,9 +6,11 @@ This folder contains all the resources you need to build AI-friendly source code
 
 ```
 .ai/
+├── inputs/             # Input templates to capture requirements (START HERE!)
+├── prompts/            # Prompt templates for common tasks
 ├── rules/              # Coding rules for each tech stack
 ├── checklists/         # Verification checklists
-├── prompts/            # Prompt templates for common tasks
+├── INDEX.md           # Quick reference guide
 └── README.md          # This file
 ```
 
@@ -23,12 +25,20 @@ Pick the appropriate rule set for your project:
 - **Python**: General Python development (scripts, CLI tools, libraries)
 - **Python + FastAPI**: Backend API development with FastAPI
 
-### 2. Use Prompt Templates
+### 2. Capture Requirements & Use Prompt Templates
 
 When working with AI assistants:
 
-1. **Start with the preamble** (`prompts/00-standard-preamble.md`)
-2. **Choose a template** based on your task:
+1. **Capture requirements first** (`.ai/inputs/` folder)
+   - **NEW FEATURE** → Use `inputs/00-input-feature.md`
+   - **BUG FIX** → Use `inputs/01-input-fixbug.md`
+   - **UPDATE CODE** → Use `inputs/02-input-update.md`
+   - This ensures you have all necessary information before starting
+   - Helps you choose the right prompt template
+
+2. **Start with the preamble** (`prompts/00-standard-preamble.md`)
+
+3. **Choose a prompt template** based on your task:
    - `01-new-feature-basic.md` - Simple features
    - `02-new-feature-detailed.md` - Complex features
    - `03-modify-feature.md` - Update existing code
@@ -36,8 +46,8 @@ When working with AI assistants:
    - `05-refactor-code.md` - Code improvements
    - `06-add-tests.md` - Testing
 
-3. **Fill in the template** with your specific requirements
-4. **Send to AI** assistant
+4. **Fill in the template** with information from your input file
+5. **Send to AI** assistant
 
 ### 3. Verify with Checklist
 
@@ -47,6 +57,35 @@ After AI generates code, verify using the appropriate checklist:
 - `checklists/laravel-php-checklist.md`
 - `checklists/python-checklist.md`
 - `checklists/python-fastapi-checklist.md`
+
+## 📥 Input Templates (START HERE!)
+
+Before writing any code, capture your requirements using the appropriate input template. These templates ensure you have all necessary information organized before implementation.
+
+### Available Input Templates
+
+| Template | Use For | File |
+|----------|---------|------|
+| **Feature Input** | New features | `inputs/00-input-feature.md` |
+| **Bug Fix Input** | Fixing bugs | `inputs/01-input-fixbug.md` |
+| **Update Input** | Modifying/updating code | `inputs/02-input-update.md` |
+
+### Why Use Input Templates?
+
+1. **Complete Requirements** - Ensures nothing is forgotten
+2. **Better Planning** - Forces you to think through all aspects
+3. **Faster Implementation** - AI has all info needed upfront
+4. **Consistent Quality** - Every task follows same thorough process
+5. **Reusable** - Save filled templates for future reference
+
+### How to Use
+
+1. Copy the appropriate input template
+2. Fill in all sections (skip irrelevant ones)
+3. Use this as source material for your prompt template
+4. Keep the filled template in `task_executions/` folder for tracking
+
+---
 
 ## 📋 Rules
 
@@ -123,18 +162,23 @@ Use these to verify AI-generated code meets all standards.
 ### Template Usage Pattern
 
 ```
-1. Copy standard preamble
-2. Choose appropriate template
-3. Fill in placeholders [LIKE_THIS]
-4. Add to your AI assistant
-5. Review generated code
-6. Verify with checklist
+1. Fill input template from .ai/inputs/ folder:
+   - Feature: inputs/00-input-feature.md
+   - Bug: inputs/01-input-fixbug.md
+   - Update: inputs/02-input-update.md
+2. Copy standard preamble (prompts/00-standard-preamble.md)
+3. Choose appropriate prompt template (prompts/01-06)
+4. Fill prompt template with info from your input file
+5. Add to your AI assistant
+6. Review generated code
+7. Verify with checklist
 ```
 
 ### Available Templates
 
 | Template | Use Case | File |
 |----------|----------|------|
+| **Input Requirements** | Capture requirements FIRST | `00-input-requirements.md` |
 | **Preamble** | Start of every prompt | `00-standard-preamble.md` |
 | **New Feature - Basic** | Simple features | `01-new-feature-basic.md` |
 | **New Feature - Detailed** | Complex features | `02-new-feature-detailed.md` |

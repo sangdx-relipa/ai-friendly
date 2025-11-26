@@ -3,33 +3,58 @@
 ## 🎯 I Want To...
 
 ### Add a New Feature
-→ Use: `prompts/01-new-feature-basic.md` (simple) or `prompts/02-new-feature-detailed.md` (complex)
-→ Rules: Choose from `rules/` based on your tech stack
-→ Verify: Use appropriate checklist from `checklists/`
-
-### Modify Existing Code
-→ Use: `prompts/03-modify-feature.md`
-→ Rules: `rules/[your-tech-stack]-rules.md`
-→ Verify: `checklists/[your-tech-stack]-checklist.md`
+→ **First:** Fill `inputs/00-input-feature.md` with all requirements
+→ **Then:** Use `prompts/01-new-feature-basic.md` (simple) or `prompts/02-new-feature-detailed.md` (complex)
+→ **Rules:** Choose from `rules/` based on your tech stack
+→ **Verify:** Use appropriate checklist from `checklists/`
 
 ### Fix a Bug
-→ Use: `prompts/04-fix-bug.md`
-→ Rules: `rules/[your-tech-stack]-rules.md`
-→ Verify: `checklists/[your-tech-stack]-checklist.md`
+→ **First:** Fill `inputs/01-input-fixbug.md` with bug details
+→ **Then:** Use `prompts/04-fix-bug.md`
+→ **Rules:** `rules/[your-tech-stack]-rules.md`
+→ **Verify:** `checklists/[your-tech-stack]-checklist.md`
+
+### Modify Existing Code
+→ **First:** Fill `inputs/02-input-update.md` with change details
+→ **Then:** Use `prompts/03-modify-feature.md`
+→ **Rules:** `rules/[your-tech-stack]-rules.md`
+→ **Verify:** `checklists/[your-tech-stack]-checklist.md`
 
 ### Improve Code Quality
-→ Use: `prompts/05-refactor-code.md`
-→ Rules: `rules/[your-tech-stack]-rules.md`
-→ Verify: `checklists/[your-tech-stack]-checklist.md`
+→ **First:** Fill `inputs/02-input-update.md` (select "Refactor" type)
+→ **Then:** Use `prompts/05-refactor-code.md`
+→ **Rules:** `rules/[your-tech-stack]-rules.md`
+→ **Verify:** `checklists/[your-tech-stack]-checklist.md`
 
 ### Add Tests
-→ Use: `prompts/06-add-tests.md`
-→ Rules: `rules/[your-tech-stack]-rules.md`
-→ Verify: `checklists/[your-tech-stack]-checklist.md`
+→ **Then:** Use `prompts/06-add-tests.md`
+→ **Rules:** `rules/[your-tech-stack]-rules.md`
+→ **Verify:** `checklists/[your-tech-stack]-checklist.md`
 
 ---
 
 ## 📂 File Quick Reference
+
+### Input Templates (Capture Requirements FIRST!)
+```
+inputs/
+├── 00-input-feature.md             # NEW FEATURE requirements
+├── 01-input-fixbug.md              # BUG FIX details
+└── 02-input-update.md              # UPDATE/MODIFY details
+```
+
+### Prompts (What to Say to AI)
+```
+prompts/
+├── 00-input-requirements.md        # Generic requirements template
+├── 00-standard-preamble.md         # Add to every prompt
+├── 01-new-feature-basic.md         # Add simple features
+├── 02-new-feature-detailed.md      # Add complex features
+├── 03-modify-feature.md            # Update existing code
+├── 04-fix-bug.md                   # Fix bugs
+├── 05-refactor-code.md             # Improve code
+└── 06-add-tests.md                 # Write tests
+```
 
 ### Rules (What AI Should Follow)
 ```
@@ -51,30 +76,27 @@ checklists/
 └── python-fastapi-checklist.md     # Verify Python FastAPI code
 ```
 
-### Prompts (What to Say to AI)
-```
-prompts/
-├── 00-standard-preamble.md         # Start every prompt with this
-├── 01-new-feature-basic.md         # Add simple features
-├── 02-new-feature-detailed.md      # Add complex features
-├── 03-modify-feature.md            # Update existing code
-├── 04-fix-bug.md                   # Fix bugs
-├── 05-refactor-code.md             # Improve code
-└── 06-add-tests.md                 # Write tests
-```
-
 ---
 
-## 🏃 Quick Start (3 Steps)
+## 🏃 Quick Start (5 Steps)
 
-### Step 1: Pick Your Template
-Based on what you want to do, choose a prompt from `prompts/`
+### Step 0: Capture Requirements FIRST!
+Fill out the appropriate input template from `.ai/inputs/`:
+- **New feature** → `inputs/00-input-feature.md`
+- **Bug fix** → `inputs/01-input-fixbug.md`
+- **Update code** → `inputs/02-input-update.md`
 
-### Step 2: Add Your Details
-Fill in the placeholders like `[FEATURE_NAME]`, `[Tech Stack]`, etc.
+### Step 1: Add Standard Preamble
+Copy `prompts/00-standard-preamble.md` to start your prompt
 
-### Step 3: Send to AI
-Copy your filled template and send it to your AI assistant
+### Step 2: Pick Your Prompt Template
+Based on what you want to do, choose from `prompts/01-06`
+
+### Step 3: Fill Prompt Template
+Use information from your input file to fill the prompt template
+
+### Step 4: Send to AI
+Copy your complete prompt and send it to your AI assistant
 
 ---
 
@@ -144,11 +166,13 @@ Copy your filled template and send it to your AI assistant
 
 ## 🎓 Remember
 
-✓ Always start with the preamble (`prompts/00-standard-preamble.md`)
+✓ **START with input templates** (`inputs/00-input-feature.md`, `inputs/01-input-fixbug.md`, `inputs/02-input-update.md`)
+✓ Always include the preamble (`prompts/00-standard-preamble.md`)
 ✓ Always reference the appropriate rule file
 ✓ Always verify with the checklist
-✓ Be specific - fill all template placeholders
+✓ Be specific - fill all template sections
 ✓ Provide context - explain why, not just what
+✓ Save filled input templates in `tasks/` folder for tracking
 
 ---
 
