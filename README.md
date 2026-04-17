@@ -32,14 +32,19 @@ your-project/
 │   │   ├── react-typescript-rules.md
 │   │   ├── laravel-php-rules.md
 │   │   ├── python-rules.md
-│   │   └── python-fastapi-rules.md
+│   │   ├── python-fastapi-rules.md
+│   │   ├── java-rules.md
+│   │   └── java-spring-boot-rules.md
 │   ├── checklists/         # Code verification checklists
 │   │   ├── nestjs-typescript-checklist.md
 │   │   ├── react-typescript-checklist.md
 │   │   ├── laravel-php-checklist.md
 │   │   ├── python-checklist.md
-│   │   └── python-fastapi-checklist.md
+│   │   ├── python-fastapi-checklist.md
+│   │   ├── java-checklist.md
+│   │   └── java-spring-boot-checklist.md
 │   ├── prompts/            # AI prompt templates
+│   │   ├── 00-input-requirements.md
 │   │   ├── 00-standard-preamble.md
 │   │   ├── 01-new-feature-basic.md
 │   │   ├── 02-new-feature-detailed.md
@@ -47,6 +52,12 @@ your-project/
 │   │   ├── 04-fix-bug.md
 │   │   ├── 05-refactor-code.md
 │   │   └── 06-add-tests.md
+│   ├── inputs/             # Quick input templates
+│   │   ├── 00-input-feature.md
+│   │   ├── 01-input-fixbug.md
+│   │   └── 02-input-update.md
+│   ├── base_generation.md # Base generation guidelines
+│   ├── prompt.md          # Master prompt reference
 │   ├── INDEX.md           # Quick reference guide
 │   └── README.md          # Detailed documentation
 └── README.md              # Your project README
@@ -59,6 +70,8 @@ your-project/
 - **Laravel + PHP** - Backend API development
 - **Python** - General Python projects (scripts, CLI tools, libraries)
 - **Python + FastAPI** - Backend API development with FastAPI
+- **Java** - General Java projects
+- **Java + Spring Boot** - Backend API development with Spring Boot
 
 ## 💡 How It Works
 
